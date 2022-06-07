@@ -2,7 +2,7 @@ const galleryItems = [
     { id: 1, path: 'images/old-cantankerous.jpeg', 
     description: 'Photo of Michael and myself from the production of Old Cantakerous where we met.', likes: 0 },
     { id: 2, path: 'images/signing-the-door.jpeg', 
-    description: 'Photo of me "signing the door". Every drama Major at Franciscan University signs the backstage door when they complete their senior one-act', likes: 0 },
+    description: 'Photo of me "signing the door". Every Drama Major at Franciscan University signs the backstage door when they complete their senior one-act', likes: 0 },
     { id: 3, path: 'images/wedding-spin.jpeg', 
     description: 'Photo of Michael and I on our wedding day. October 2016 in Steubenville, OH', likes: 0 },
     { id: 4, path: 'images/gwen-ultrasound.jpeg', 

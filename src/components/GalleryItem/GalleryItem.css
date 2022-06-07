@@ -1,0 +1,11 @@
+.itemDiv{
+    background-color: #EAEAEA;
+    border: dotted 5px #567568;
+    margin: auto;
+    width: 385px;
+    height: 460px;
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+}

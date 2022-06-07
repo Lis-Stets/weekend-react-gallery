@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import axios from 'axios';
+import './GalleryItem.css';
+
 
 function GalleryItem( props ){
     const [show, setShow] = useState( true );
@@ -6,16 +9,29 @@ function GalleryItem( props ){
     const toggleShow = () =>{
         setShow( !show );
     }
+    
+    const likeImage = () =>{
+        axios.put( `/gallery/like/${props.item.id}` ).then( ( response )=>{
+            console.log( response.data );
+        }).catch ( ( err )=>{
+            console.log(err );
+            alert( 'error adding like' );
+        })
+    }
 
     return(
-        <div onClick={ toggleShow }>
+        <div className='itemDiv'>
             {
                 show?
-                <img src={props.item.path}/>
+                <img onClick={ toggleShow } src={props.item.path}/>
                 :
-                <p>{props.item.description}</p>
+                <p onClick={ toggleShow }>{props.item.description}</p>
             }
+            <p></p>
+            <button onClick={ likeImage } className='itemButton'>Like</button>
+            <p className='itemLikes'>{props.item.likes}</p>
         </div>
+        
     )
 }
 

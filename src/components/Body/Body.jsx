@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 import axios from 'axios';
+import './Body.css';
+
 
 function Body( props ){
     const [images, setImages] = useState( [] );
     // Make a GET call On page load
     useEffect( ()=>{
         getImages();
-    }, [] ); // This empty array tells this to only run once
+    }, [{images}] ); // This empty array tells this to only run once
 
     const getImages=()=>{
         axios.get( '/gallery' ).then( ( response )=>{
@@ -18,8 +20,8 @@ function Body( props ){
         })
     }
     return(
-        <div>
-            <h2>Gallery of Me</h2>
+        <div className='Body'>
+            
             <GalleryList imageArray={ images } />
         
         </div>
