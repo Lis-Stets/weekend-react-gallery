@@ -6,6 +6,7 @@ function GalleryList( props ){
     return(
         <div>
             <h2></h2>
+
             {props.imageArray.map( item =>(<GalleryItem item = {item}/>))}
         </div>
     )

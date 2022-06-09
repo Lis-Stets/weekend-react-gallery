@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 import axios from 'axios';
 import './Body.css';
+import TotalLikes from '../TotalLikes/TotalLikes';
 
 
 function Body( props ){
@@ -21,9 +22,8 @@ function Body( props ){
     }
     return(
         <div className='Body'>
-            
+            <TotalLikes />
             <GalleryList imageArray={ images } />
-        
         </div>
     )
 }

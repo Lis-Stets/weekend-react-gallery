@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './GalleryItem.css';
-
+// step 4 - import react redux stuff to let us access store
+import { useDispatch, useSelector } from 'react-redux';
 
 function GalleryItem( props ){
     const [show, setShow] = useState( true );
+    const dispatch = useDispatch();
 
     const toggleShow = () =>{
         setShow( !show );
@@ -13,6 +15,7 @@ function GalleryItem( props ){
     const likeImage = () =>{
         axios.put( `/gallery/like/${props.item.id}` ).then( ( response )=>{
             console.log( response.data );
+            dispatch( { type: 'INCREMENT_LIKES'});
         }).catch ( ( err )=>{
             console.log(err );
             alert( 'error adding like' );
