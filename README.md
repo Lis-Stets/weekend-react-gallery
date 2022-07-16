@@ -1,9 +1,18 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: 1 Week_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This project is Photo Gallery application. It displays photos of memorable moments of my life. Whem you click on an image it displays a description of the photo. Viewers can 'like' individual photos, and a the number of times a photo has been liked will increase. The total number of likes is displayed at the top of the page.
+
+
+## Built With
+
+- HTML
+- CSS
+- JavaScript
+- React
+
+## Acknowledgement
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped me with the knowledge to make this project.
